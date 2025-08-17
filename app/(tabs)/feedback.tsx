@@ -100,7 +100,7 @@ const CommentRegistration = () => {
         <Provider>
             <View style={styles.containerLogo}>
 
-                <Image source={require('../../assets/images/Fala_campus-logo.png')} style={styles.logo} />
+                
             </View>
             <ScrollView>
 
@@ -263,9 +263,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5F5F5',
     },
     containerLogo: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5F5F5',
+        width: "100%",
+        height:"12%",
+        backgroundColor: "#E7F6D4",
+        alignItems: "center",
+        flexDirection: 'row',
         
     },
 

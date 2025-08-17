@@ -39,7 +39,10 @@ export default function Feed() {
   
   return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-            <Image source={require('../../assets/images/Fala_campus-logo.png')} style={styles.logo} />
+          <View style={styles.logoContainer}>
+                
+          </View>
+            
             <Text style={styles.topTitle}>Feed de Comentários</Text>
             {loading ? (
                 <Text style={{ textAlign: 'center', marginTop: 20 }}>Carregando comentários...</Text>
@@ -107,6 +110,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   topTitle: {
+    marginTop: 30,
     fontSize: width * 0.06,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -137,6 +141,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: width * 0.02,
     marginBottom: height * 0.02,
     textAlignVertical: 'top',
+  },
+  logoContainer: {
+    width: "112%",
+    height:"12%",
+    backgroundColor: "#E7F6D4",
+    alignItems: "center",
+    flexDirection: 'row',
+    
   },
   sendButton: {
     backgroundColor: '#4CAF50',

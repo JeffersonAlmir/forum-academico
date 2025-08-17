@@ -209,12 +209,10 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     width: "100%",
+    height:"12%",
     backgroundColor: "#E7F6D4",
     alignItems: "center",
-    paddingVertical: 20,
-    marginBottom: 40,
-    flexDirection: 'row',
-    
+    flexDirection: 'row', 
   },
    buttonContainer: {
     marginVertical: 10, 
