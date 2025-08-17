@@ -17,7 +17,7 @@ import { Formik } from "formik";
 const validationSchema = Yup.object().shape({
   nome: Yup.string()
     .trim()
-    .min(5, "O campo não pode ser vazio ou só espaços")
+    .min(5, "O campo tem que ter no mínimo 5 caracteres")
     .max(30)
     .required("O nome do departamento é obrigatório."),
 });
@@ -48,12 +48,14 @@ const CadastroDepartamento = () => {
       id: Date.now().toString(),
       nome: values.nome.trim(),
     };
+    
 
     try {
       await AsyncStorage.setItem(
         `department_${newDepartment.id}`,
         JSON.stringify(newDepartment)
       );
+
       Alert.alert("Sucesso", "Departamento cadastrado com sucesso!");
       resetForm();
       router.replace('/(tabs)/deps')

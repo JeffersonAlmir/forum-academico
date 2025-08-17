@@ -36,7 +36,9 @@ const Departamentos = () => {
         JSON.parse(value!)
       );
 
-      setDepartments(departmentsList);
+      const listaOrdenada = departmentsList.sort((a,b)=>a.nome.localeCompare(b.nome))
+      
+      setDepartments(listaOrdenada);
     } catch (error) {
       console.log(error);
       Alert.alert("Erro", "Ocorreu um erro ao carregar os departamentos.");
@@ -82,6 +84,7 @@ const Departamentos = () => {
     const departmentsList = departmentsData.map(([key, value]) =>
       JSON.parse(value!)
     );
+    
     const existe = departmentsList.some((item)=>{ 
       return item?.nome?.trim().toLowerCase() === editName.trim().toLowerCase() 
     });

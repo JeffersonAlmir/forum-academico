@@ -14,12 +14,22 @@ type IconSymbolName = keyof typeof MAPPING;
  * - see SF Symbols in the [SF Symbols](https://developer.apple.com/sf-symbols/) app.
  */
 const MAPPING = {
-  'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'apartment.building.fill': 'apartment',
-  'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
-} as IconMapping;
+  // See MaterialIcons here: https://icons.expo.fyi
+  // See SF Symbols in the SF Symbols app on Mac.                 
+  'home.fill': 'home',                              
+  'send.fill': 'send',
+  'mycomments.fill': 'notes',  
+  'reply.bubble.fill': 'chat',    
+  'apartment.building.fill': 'apartment', 
+  'login.square.fill': 'login',
+  'profile.fill': 'account-circle',
+  'folder.fill' : 'folder'
+} as Partial<
+  Record<
+    import('expo-symbols').SymbolViewProps['name'],
+    React.ComponentProps<typeof MaterialIcons>['name']
+  >
+>;
 
 /**
  * An icon component that uses native SF Symbols on iOS, and Material Icons on Android and web.

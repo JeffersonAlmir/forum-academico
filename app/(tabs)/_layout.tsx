@@ -41,12 +41,27 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="feed"
+        options={{
+          title: 'Feed',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="folder.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="feedback"
+        options={{
+          title: 'Comentários',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="send.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="deps"
         options={{
           title: 'Departamentos',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="apartment.building.fill" color={color} />,
         }}
       />
+      
     </Tabs>
     
   );
